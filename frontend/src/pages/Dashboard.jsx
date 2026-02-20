@@ -27,7 +27,7 @@ function Dashboard() {
   }, []);
 
   const fetchAlerts = async () => {
-    const response = await axios.get("http://localhost:5000/api/alerts", {
+    const response = await axios.get("https://ignou-alert-backend.onrender.com/api/alerts", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -52,7 +52,7 @@ function Dashboard() {
     e.preventDefault();
 
     await axios.post(
-      "http://localhost:5000/api/alerts",
+      "https://ignou-alert-backend.onrender.com/api/alerts",
       formData,
       {
         headers: {

@@ -25,7 +25,7 @@ function AdminDashboard() {
       }
 
       const response = await axios.post(
-        "http://localhost:5000/api/alerts",
+        "https://ignou-alert-backend.onrender.com/api/alerts",
         formData,
         { headers: { Authorization: `Bearer ${token}` } }
       );
