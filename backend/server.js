@@ -17,6 +17,11 @@ app.use(express.json());
 const authRoutes = require("./routes/authRoutes");
 const alertRoutes = require("./routes/alertRoutes");
 
+// Health check route
+app.get("/", (req, res) => {
+  res.send("Backend is running successfully 🚀");
+});
+
 app.use("/api/auth", authRoutes);
 app.use("/api/alerts", alertRoutes);
 
